@@ -1,3 +1,6 @@
 .playwright-mcp/
 *.png
 !*.ico
+
+# Local Netlify folder
+.netlify
