@@ -175,9 +175,7 @@ function App() {
       <div className="flex w-full flex-1 flex-col gap-3 px-5 py-3 md:min-h-0 md:gap-3 md:px-8 md:py-4">
         <header className="flex flex-none items-center justify-between gap-4 border-b border-border pb-3">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-md border border-primary/25 bg-accent font-serif text-base font-semibold text-primary">
-              N
-            </div>
+            <img src="/numerology_logo.png" alt="Logo" className="h-9 w-9 rounded-md object-cover border border-primary/25 shadow-md shadow-primary/10" />
             <div>
               <h1 className="font-serif text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                 Numerology
