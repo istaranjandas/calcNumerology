@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.5rem;
+  --background: hsl(43 38% 97%);
+  --foreground: hsl(28 18% 12%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(28 18% 12%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(28 18% 12%);
+  --primary: hsl(160 84% 21%);
+  --primary-foreground: hsl(43 38% 98%);
+  --secondary: hsl(40 24% 93%);
+  --secondary-foreground: hsl(28 18% 16%);
+  --muted: hsl(40 20% 94%);
+  --muted-foreground: hsl(30 8% 40%);
+  --accent: hsl(160 40% 92%);
+  --accent-foreground: hsl(160 84% 18%);
+  --destructive: hsl(8 62% 45%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(38 16% 86%);
+  --input: hsl(38 16% 84%);
+  --ring: hsl(160 84% 24%);
+  --gold: hsl(38 64% 46%);
+}
+
+.dark {
+  --background: hsl(28 14% 8%);
+  --foreground: hsl(40 24% 92%);
+  --card: hsl(28 12% 11%);
+  --card-foreground: hsl(40 24% 92%);
+  --popover: hsl(28 12% 11%);
+  --popover-foreground: hsl(40 24% 92%);
+  --primary: hsl(158 64% 48%);
+  --primary-foreground: hsl(28 14% 8%);
+  --secondary: hsl(28 10% 16%);
+  --secondary-foreground: hsl(40 24% 92%);
+  --muted: hsl(28 10% 16%);
+  --muted-foreground: hsl(36 10% 62%);
+  --accent: hsl(160 40% 18%);
+  --accent-foreground: hsl(150 50% 85%);
+  --destructive: hsl(8 70% 55%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(30 8% 22%);
+  --input: hsl(30 8% 24%);
+  --ring: hsl(158 64% 48%);
+  --gold: hsl(40 70% 58%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 10px);
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+
+  --animate-fade-in: fade-in 0.4s ease both;
+  --animate-rise-in: rise-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
